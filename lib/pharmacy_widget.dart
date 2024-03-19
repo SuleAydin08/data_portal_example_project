@@ -1,12 +1,11 @@
 import 'dart:convert';
-import 'package:data_portal_example_project/pharmacy_model.dart';
 import 'package:data_portal_example_project/pharmacy_list.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 // ignore: must_be_immutable
 class PharmacyWidget extends StatefulWidget {
-  PharmacyWidget({
+  const PharmacyWidget({
     super.key,
   });
 
