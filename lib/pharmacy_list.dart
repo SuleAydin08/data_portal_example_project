@@ -1,19 +1,18 @@
-import 'package:data_portal_example_project/eczane_model.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class PharmacyListWidget extends StatelessWidget {
   PharmacyListWidget({
     super.key,
-    required this.eczaneList,
+    required this.pharmacyList,
   });
 
-  EczaneModel eczaneList;
+  Map pharmacyList;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
+      width: double.infinity, 
       height: 125,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.black),
@@ -33,31 +32,49 @@ class PharmacyListWidget extends StatelessWidget {
           ),
           const SizedBox(width: 9,height: 9,),
           Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                eczaneList.pharmacyname,
+                pharmacyList['ECZANE ADI'],
                 style: const TextStyle(
                     color: Colors.black,
-                    fontSize: 20,
+                    fontSize: 10,
                     fontWeight: FontWeight.w900),
               ),
               Text(
-                eczaneList.pharmacyphone.toString(),
+                 pharmacyList['TELEFON'],
                 style: const TextStyle(
                   color: Colors.black,
+                   fontSize: 10,
                 ),
               ),
               Text(
-                eczaneList.pharmacyaddress,
+                 pharmacyList['MAHALLE'],
                 style: const TextStyle(
                   color: Colors.black,
+                   fontSize: 10,
                 ),
               ),
               Text(
-                eczaneList.pharmacydistrict,
+                 pharmacyList["CADDE-SOKAK"],
                 style: const TextStyle(
                   color: Colors.black,
+                   fontSize: 10,
+                ),
+              ),
+               Text(
+                 pharmacyList["NO"],
+                style: const TextStyle(
+                  color: Colors.black,
+                   fontSize: 10,
+                ),
+              ),
+               Text(
+                 pharmacyList["SEMT"],
+                style: const TextStyle(
+                  color: Colors.black,
+                   fontSize: 10,
                 ),
               ),
             ],
